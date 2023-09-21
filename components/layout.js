@@ -9,20 +9,20 @@ export default function Conception( {children, maison} ){
       </Head>
       <header>
         <nav> 
-          <a href="https://cat-bounce.com/">Check out this enjoyable cat site</a>
+          <a href="https://www.cat-bounce.com/">Check out this enjoyable cat site</a>
         </nav>        
       </header>
       <main>
         {children}
       </main>
       {!maison && (
-        <Link href="/" className="btn btn-primary mt-3">
+        <Link href = "/" className = "btn btn-primary mt-3">
         ⇦ Back to maison
         </Link>
        )
       }
       <footer>
-        <h1>Huge Footer</h1>
+        <h3>Huge Footer</h3>
       </footer>
     </div>
   );
