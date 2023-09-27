@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Conception from '../components/layout';
 import {getEachInfo, getData} from '../lib/data';
 
