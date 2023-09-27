@@ -1,19 +1,35 @@
 import Link from 'next/link';
 import Conception from '../components/layout';
 import { getSortedList } from '../lib/data';
+import { newStuff } from '../libdeux/dataTwo';
 
 export async function getStaticProps(){
   const AllMaterial = getSortedList();
-  return{
-    props:{ AllMaterial }
+  const AllMaterialTwo = newStuff();
+      return{
+    props:{AllMaterial,AllMaterialTwo}
   };
 }
 
-export default function Maison( {AllMaterial} ){
+
+export default function Maison({AllMaterialTwo,AllMaterial}){
   return(
     <Conception maison>
    <strong> <p>salut mon amie, cest next.js ici. </p></strong>
-      <h1> Names in my list:</h1>
+      <h1> Some professions from different JS file but</h1>
+      <h1> using the same json file with new bootstrap classname</h1>
+      <div className="navbar navbar-light bg-light">
+        {AllMaterialTwo.map(
+            ({id, name}) => (
+             <Link key={id} href = {`/${id}`} className = "navbar-brand">
+               {name}
+             </Link>
+            )
+          )
+        }
+      </div>
+      <br></br>
+        <h1> (Origional file) Names in my list:</h1>
       <div className="list-group">
         {AllMaterial.map(
             ({id, name}) => (
@@ -27,4 +43,6 @@ export default function Maison( {AllMaterial} ){
     </Conception>
   );
 }
+
+
 
