@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Conception( {children, maison} ){
+export default function Conception( {children,maison} ){
   return(
     <div>
       <Head>
@@ -21,6 +21,7 @@ export default function Conception( {children, maison} ){
         </Link>
        )
       }
+
       <footer>
         <h3>Huge Footer</h3>
       </footer>

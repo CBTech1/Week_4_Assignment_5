@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Conception from '../components/layout';
 import { getSortedList } from '../lib/data';
-//import { playWithInfo } from '../lib/dataTwo';
 
 export async function getStaticProps(){
   const AllMaterial = getSortedList();
@@ -10,7 +9,6 @@ export async function getStaticProps(){
   };
 }
 
-  
 export default function Maison( {AllMaterial} ){
   return(
     <Conception maison>
@@ -29,3 +27,4 @@ export default function Maison( {AllMaterial} ){
     </Conception>
   );
 }
+

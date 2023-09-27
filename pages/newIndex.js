@@ -1,21 +1,20 @@
 import Link from 'next/link';
 import Conception from '../components/layout';
-import { playWithInfo } from '../lib/dataTwo';
+import { getSortedList } from '../libdeux/dataTwo';
 
 export async function getStaticProps(){
-  const AllMaterialTwo = playWithInfo();
+  const AllMaterialTwo = getSortedList();
   return{
-    props:{ AllMaterialTwo }
+    props:{ AllMaterial }
   };
 }
 
-  
-export default function NewCode( {AllMaterialTwo} ){
+export default function Maison( {AllMaterialTwo} ){
   return(
-    <Conception>
-      <h1> New Code</h1>
-      <div>
-        {AllMaterialTwo.map(
+    <Conception maison>
+   <strong> <p>word</h1>
+      <div className="list-group">
+        {AllMaterial.map(
             ({id, name}) => (
              <Link key={id} href = {`/${id}`} className = "list-group-item list-group-item-action list-group-item-dark">
                {name}
