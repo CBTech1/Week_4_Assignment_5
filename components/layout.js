@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Conception( {children,maison} ){
+export default function Conception( {children,house} ){
   return(
     <div>
       <Head>
@@ -15,7 +15,7 @@ export default function Conception( {children,maison} ){
       <main>
         {children}
       </main>
-      {!maison && (
+      {!house && (
         <Link href = "/" className = "btn btn-primary mt-3">
         ⇦ Back to maison
         </Link>

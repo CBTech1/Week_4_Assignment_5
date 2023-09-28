@@ -12,9 +12,9 @@ export async function getStaticProps(){
 }
 
 
-export default function Maison({AllMaterialTwo,AllMaterial}){
+export default function House({AllMaterialTwo,AllMaterial}){
   return(
-    <Conception maison>
+    <Conception house>
    <strong> <p>salut mon amie, cest next.js ici. </p></strong>
       <h1> Some professions from different JS file but</h1>
       <h1> using the same json file with new bootstrap classname</h1>
